@@ -1,0 +1,2 @@
+python RunTest.py
+pause

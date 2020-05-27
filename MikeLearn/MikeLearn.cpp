@@ -6,7 +6,7 @@ using namespace  Eigen;
 
 void test(std::vector<float> xArr)
 {
-	std::cout << xArr[49999999];
+	std::cout << xArr.size();
 	std::cout << std::endl;
 }
 
