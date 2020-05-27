@@ -20,7 +20,7 @@ Y = [0;
     
  index = 1
  
- for epoch = 1:20001
+ for epoch = 1:200
      for i = 1:length(X)
 
         x0 = X(i,:)';

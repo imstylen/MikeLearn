@@ -9,3 +9,4 @@ namespace std {
 }
 
 %include "MikeLearn.h"
+%include "Model.h"

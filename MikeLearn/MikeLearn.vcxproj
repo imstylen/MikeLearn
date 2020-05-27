@@ -157,9 +157,11 @@
   <ItemGroup>
     <ClCompile Include="MikeLearn.cpp" />
     <ClCompile Include="MikeLearn_wrap.cxx" />
+    <ClCompile Include="Model.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MikeLearn.h" />
+    <ClInclude Include="Model.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="MikeLearn.i">

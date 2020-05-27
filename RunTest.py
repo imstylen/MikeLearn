@@ -1,4 +1,6 @@
-import MikeLearn
+from Release import MikeLearn
 
-MikeLearn.test([4.0,3.0,2.0,1.0])
-MikeLearn.fit([4.0,3.0,2.0,1.0],2)
+M = MikeLearn.Model([0,0,0,1,1,0,1,1],2,[0,1,1,0],1,2)
+M.fit(10000,0.75)
+print(M.predict([0,0]))
+print(M.predict([0,1]))
