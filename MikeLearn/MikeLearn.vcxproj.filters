@@ -31,8 +31,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MikeLearn.i">
-      <Filter>Source Files</Filter>
-    </None>
+    <CustomBuild Include="MikeLearn.i" />
   </ItemGroup>
 </Project>
