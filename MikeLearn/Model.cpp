@@ -125,7 +125,7 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 			E = E * E;
 
 			//std::cout << "E = " << std::endl;
-			//std::cout << E << std::endl;
+			std::cout << E << std::endl;
 
 		}
 
