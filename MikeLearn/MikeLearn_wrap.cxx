@@ -7377,9 +7377,21 @@ SWIGINTERN PyObject *FloatVector_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObje
 
 SWIGINTERN PyObject *_wrap_test(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
+  std::vector< float,std::allocator< float > > arg1 ;
+  PyObject *swig_obj[1] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "test", 0, 0, 0)) SWIG_fail;
-  test();
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  {
+    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    int res = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "test" "', argument " "1"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  test(arg1);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -7473,7 +7485,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_FloatVector", _wrap_delete_FloatVector, METH_O, NULL},
 	 { "FloatVector_swigregister", FloatVector_swigregister, METH_O, NULL},
 	 { "FloatVector_swiginit", FloatVector_swiginit, METH_VARARGS, NULL},
-	 { "test", _wrap_test, METH_NOARGS, NULL},
+	 { "test", _wrap_test, METH_O, NULL},
 	 { "fit", _wrap_fit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };

@@ -4,9 +4,10 @@
 
 using namespace  Eigen;
 
-void test()
+void test(std::vector<float> xArr)
 {
-
+	std::cout << xArr[49999999];
+	std::cout << std::endl;
 }
 
 void fit(std::vector<float> xArr, int nI)
@@ -30,8 +31,6 @@ void fit(std::vector<float> xArr, int nI)
 		std::cout << "Error!!! \n";
 		std::cout << e.what() << '\n';
 	}
-
-
 
 
 }
