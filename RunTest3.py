@@ -27,7 +27,7 @@ print(len(Y))
 print("Learning")
 #Model(std::vector<float> xIn,int nInputs, std::vector<float> yIn,int nOutputs,int nHidden);
 M = MikeLearn.Model(X,nIn,Y,nOut,350)
-FinalE = M.fit(3,0.75)
+FinalE = M.fit(6,0.75)
 print("Final Error: " + str(FinalE[0]))
 
 
