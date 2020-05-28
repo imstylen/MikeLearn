@@ -172,8 +172,8 @@ std::vector<float> Model::predict(std::vector<float> xIn)
 
 std::vector<float> Model::getW1()
 {
-	std::cout << "W1: " << std::endl;
-	std::cout << M_W1 << std::endl;
+	//std::cout << "W1: " << std::endl;
+	//std::cout << M_W1 << std::endl;
 
 	std::vector<float> outVec(M_W1.data(), M_W1.data() + M_W1.rows() * M_W1.cols());
 	return outVec;
@@ -181,24 +181,24 @@ std::vector<float> Model::getW1()
 
 std::vector<float> Model::getW2()
 {
-	std::cout << "W2: " << std::endl;
-	std::cout << M_W2 << std::endl;
+	//std::cout << "W2: " << std::endl;
+	//std::cout << M_W2 << std::endl;
 	std::vector<float> outVec(M_W2.data(), M_W2.data() + M_W2.rows() * M_W2.cols());
 	return outVec;
 }
 
 std::vector<float> Model::getB1()
 {
-	std::cout << "B1: " << std::endl;
-	std::cout << M_B1 << std::endl;
+	//std::cout << "B1: " << std::endl;
+	//std::cout << M_B1 << std::endl;
 	std::vector<float> outVec(M_B1.data(), M_B1.data() + M_B1.rows() * M_B1.cols());
 	return outVec;
 }
 
 std::vector<float> Model::getB2()
 {
-	std::cout << "B2: " << std::endl;
-	std::cout << M_B2 << std::endl;
+	//std::cout << "B2: " << std::endl;
+	//std::cout << M_B2 << std::endl;
 	std::vector<float> outVec(M_B2.data(), M_B2.data() + M_B2.rows() * M_B2.cols());
 	return outVec;
 }
@@ -206,40 +206,40 @@ std::vector<float> Model::getB2()
 void Model::setW1(std::vector<float> in, int nRows)
 {
 	int nCols = in.size() / nRows;
-	std::cout << nCols << std::endl;
+	//std::cout << nCols << std::endl;
 	M_W1 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
-	std::cout << "W1: " << std::endl;
-	std::cout << M_W1 << std::endl;
+	//std::cout << "W1: " << std::endl;
+	//std::cout << M_W1 << std::endl;
 }
 
 void Model::setW2(std::vector<float> in, int nRows)
 {
 	int nCols = in.size() / nRows;
-	std::cout << nCols << std::endl;
+	//std::cout << nCols << std::endl;
 
 	M_W2 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
-	std::cout << "W2: " << std::endl;
-	std::cout << M_W2 << std::endl;
+	//std::cout << "W2: " << std::endl;
+	//std::cout << M_W2 << std::endl;
 }
 
 void Model::setB1(std::vector<float> in, int nRows)
 {
 	int nCols = in.size() / nRows;
-	std::cout << nCols << std::endl;
+	//std::cout << nCols << std::endl;
 
 	M_B1 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
-	std::cout << "B1: " << std::endl;
-	std::cout << M_B1 << std::endl;
+	//std::cout << "B1: " << std::endl;
+	//std::cout << M_B1 << std::endl;
 }
 
 void Model::setB2(std::vector<float> in, int nRows)
 {
 	int nCols = in.size() / nRows;
-	std::cout << nCols << std::endl;
+	//std::cout << nCols << std::endl;
 
 	M_B2 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
-	std::cout << "B2: " << std::endl;
-	std::cout << M_B2 << std::endl;
+	//std::cout << "B2: " << std::endl;
+	//std::cout << M_B2 << std::endl;
 }
 
 
