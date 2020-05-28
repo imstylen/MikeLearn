@@ -7504,6 +7504,254 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Model_getW1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< float,std::allocator< float > > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_getW1" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  result = (arg1)->getW1();
+  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_getW2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< float,std::allocator< float > > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_getW2" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  result = (arg1)->getW2();
+  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_getB1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< float,std::allocator< float > > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_getB1" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  result = (arg1)->getB1();
+  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_getB2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  std::vector< float,std::allocator< float > > result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_getB2" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  result = (arg1)->getB2();
+  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_setW1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  std::vector< float,std::allocator< float > > arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Model_setW1", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_setW1" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  {
+    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Model_setW1" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Model_setW1" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  (arg1)->setW1(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_setW2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  std::vector< float,std::allocator< float > > arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Model_setW2", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_setW2" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  {
+    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Model_setW2" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Model_setW2" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  (arg1)->setW2(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_setB1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  std::vector< float,std::allocator< float > > arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Model_setB1", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_setB1" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  {
+    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Model_setB1" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Model_setB1" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  (arg1)->setB1(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Model_setB2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Model *arg1 = (Model *) 0 ;
+  std::vector< float,std::allocator< float > > arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject *swig_obj[3] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Model_setB2", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Model, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Model_setB2" "', argument " "1"" of type '" "Model *""'"); 
+  }
+  arg1 = reinterpret_cast< Model * >(argp1);
+  {
+    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Model_setB2" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Model_setB2" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  (arg1)->setB2(arg2,arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_delete_Model(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Model *arg1 = (Model *) 0 ;
@@ -7595,6 +7843,14 @@ static PyMethodDef SwigMethods[] = {
 	 { "new_Model", _wrap_new_Model, METH_VARARGS, NULL},
 	 { "Model_fit", _wrap_Model_fit, METH_VARARGS, NULL},
 	 { "Model_predict", _wrap_Model_predict, METH_VARARGS, NULL},
+	 { "Model_getW1", _wrap_Model_getW1, METH_O, NULL},
+	 { "Model_getW2", _wrap_Model_getW2, METH_O, NULL},
+	 { "Model_getB1", _wrap_Model_getB1, METH_O, NULL},
+	 { "Model_getB2", _wrap_Model_getB2, METH_O, NULL},
+	 { "Model_setW1", _wrap_Model_setW1, METH_VARARGS, NULL},
+	 { "Model_setW2", _wrap_Model_setW2, METH_VARARGS, NULL},
+	 { "Model_setB1", _wrap_Model_setB1, METH_VARARGS, NULL},
+	 { "Model_setB2", _wrap_Model_setB2, METH_VARARGS, NULL},
 	 { "delete_Model", _wrap_delete_Model, METH_O, NULL},
 	 { "Model_swigregister", Model_swigregister, METH_O, NULL},
 	 { "Model_swiginit", Model_swiginit, METH_VARARGS, NULL},

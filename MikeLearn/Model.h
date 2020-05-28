@@ -30,5 +30,17 @@ public:
 
 	std::vector<float> predict(std::vector<float> xIn);
 
+	std::vector<float> getW1();
+	std::vector<float> getW2();
+	
+	std::vector<float> getB1();
+	std::vector<float> getB2();
+
+	void setW1(std::vector<float> in, int nRows);
+	void setW2(std::vector<float> in, int nRows);
+
+	void setB1(std::vector<float> in, int nRows);
+	void setB2(std::vector<float> in, int nRows);
+
 };
 

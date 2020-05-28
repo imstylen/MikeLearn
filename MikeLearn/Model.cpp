@@ -60,6 +60,10 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 
 	for (int i = 0; i < epochs; i++)
 	{
+		std::cout << "==================================" << std::endl;
+		std::cout << i << std::endl;
+		std::cout << "==================================" << std::endl;
+
 		for (int j = 0; j < nSamples; j++)
 		{
 			//std::cout << "==================================" << std::endl;
@@ -125,7 +129,11 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 			E = E * E;
 
 			//std::cout << "E = " << std::endl;
-			std::cout << E << std::endl;
+			if (j % 1000 == 0)
+			{
+				std::cout << E << std::endl;
+			}
+			//std::cout << E << std::endl;
 
 		}
 
@@ -161,4 +169,77 @@ std::vector<float> Model::predict(std::vector<float> xIn)
 
 	return Out;
 }
+
+std::vector<float> Model::getW1()
+{
+	std::cout << "W1: " << std::endl;
+	std::cout << M_W1 << std::endl;
+
+	std::vector<float> outVec(M_W1.data(), M_W1.data() + M_W1.rows() * M_W1.cols());
+	return outVec;
+}
+
+std::vector<float> Model::getW2()
+{
+	std::cout << "W2: " << std::endl;
+	std::cout << M_W2 << std::endl;
+	std::vector<float> outVec(M_W2.data(), M_W2.data() + M_W2.rows() * M_W2.cols());
+	return outVec;
+}
+
+std::vector<float> Model::getB1()
+{
+	std::cout << "B1: " << std::endl;
+	std::cout << M_B1 << std::endl;
+	std::vector<float> outVec(M_B1.data(), M_B1.data() + M_B1.rows() * M_B1.cols());
+	return outVec;
+}
+
+std::vector<float> Model::getB2()
+{
+	std::cout << "B2: " << std::endl;
+	std::cout << M_B2 << std::endl;
+	std::vector<float> outVec(M_B2.data(), M_B2.data() + M_B2.rows() * M_B2.cols());
+	return outVec;
+}
+
+void Model::setW1(std::vector<float> in, int nRows)
+{
+	int nCols = in.size() / nRows;
+	std::cout << nCols << std::endl;
+	M_W1 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
+	std::cout << "W1: " << std::endl;
+	std::cout << M_W1 << std::endl;
+}
+
+void Model::setW2(std::vector<float> in, int nRows)
+{
+	int nCols = in.size() / nRows;
+	std::cout << nCols << std::endl;
+
+	M_W2 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
+	std::cout << "W2: " << std::endl;
+	std::cout << M_W2 << std::endl;
+}
+
+void Model::setB1(std::vector<float> in, int nRows)
+{
+	int nCols = in.size() / nRows;
+	std::cout << nCols << std::endl;
+
+	M_B1 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
+	std::cout << "B1: " << std::endl;
+	std::cout << M_B1 << std::endl;
+}
+
+void Model::setB2(std::vector<float> in, int nRows)
+{
+	int nCols = in.size() / nRows;
+	std::cout << nCols << std::endl;
+
+	M_B2 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
+	std::cout << "B2: " << std::endl;
+	std::cout << M_B2 << std::endl;
+}
+
 
