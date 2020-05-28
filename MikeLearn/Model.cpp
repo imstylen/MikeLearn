@@ -1,7 +1,7 @@
 #include "Model.h"
 #include <iostream>
 #include <unsupported/Eigen/MatrixFunctions>
-
+#include <chrono>
 using namespace Eigen;
 
 Eigen::MatrixXf Model::sigmoid(Eigen::MatrixXf x)
@@ -63,6 +63,8 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 		std::cout << "==================================" << std::endl;
 		std::cout << i << std::endl;
 		std::cout << "==================================" << std::endl;
+
+		auto start = std::chrono::high_resolution_clock::now();
 
 		for (int j = 0; j < nSamples; j++)
 		{
@@ -129,13 +131,18 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 			E = E * E;
 
 			//std::cout << "E = " << std::endl;
-			if (j % 1000 == 0)
+			if (j % 5000 == 0)
 			{
 				std::cout << E << std::endl;
 			}
 			//std::cout << E << std::endl;
 
 		}
+		auto stop = std::chrono::high_resolution_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+
+		std::cout << "Time for last epoch: "
+			<< duration.count() << " seconds" << std::endl;
 
 	}
 
