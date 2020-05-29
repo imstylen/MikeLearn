@@ -2,6 +2,7 @@ from Release.MikeLearn import Model
 import pickle
 
 M = Model([0,0,0,1,1,0,1,1],2,[0,1,1,0],1,2)
+#M.setLoggerVerbosity(3)
 FinalE = M.fit(10000,0.75)
 print("FinalE " + str(FinalE[0]))
 print(M.predict([0,0]))

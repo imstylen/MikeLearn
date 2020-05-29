@@ -37,6 +37,7 @@ for i in range(0,100):
 
 #Model(std::vector<float> xIn,int nInputs, std::vector<float> yIn,int nOutputs,int nHidden);
 M = Model(X,4,Y,2,3)
+M.setLoggerVerbosity(1)
 FinalE = M.fit(10000,0.75)
 print("Final Error: " + str(FinalE[0]))
 

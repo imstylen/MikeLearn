@@ -38,6 +38,8 @@ Model::Model(std::vector<float> xIn, int nInputs, std::vector<float> yIn, int nO
 	M_B1 = MatrixXf::Random(nHidden, 1);
 	M_B2= MatrixXf::Random(nOutputs, 1);
 
+	logger = new Logger(0);
+
 	//std::cout << "W1" << std::endl;
 	//std::cout << M_W1 << std::endl;
 
@@ -60,9 +62,10 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 
 	for (int i = 0; i < epochs; i++)
 	{
-		std::cout << "==================================" << std::endl;
-		std::cout << i << std::endl;
-		std::cout << "==================================" << std::endl;
+		logger->LogGeneral("===========EPOCH===========",
+							i,
+						   "===========================");
+
 
 		auto start = std::chrono::high_resolution_clock::now();
 
@@ -133,16 +136,16 @@ std::vector<float> Model::fit(int epochs, float learningRate)
 			//std::cout << "E = " << std::endl;
 			if (j % 5000 == 0)
 			{
-				std::cout << E << std::endl;
+				logger->LogVerbose("E= ", E);
 			}
-			//std::cout << E << std::endl;
+			
+			logger->LogVeryVerbose("E= ", E);
 
 		}
 		auto stop = std::chrono::high_resolution_clock::now();
 		auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
 
-		std::cout << "Time for last epoch: "
-			<< duration.count() << " seconds" << std::endl;
+		logger->LogGeneral("Time for last epoch", duration.count(), "seconds");
 
 	}
 
@@ -247,6 +250,11 @@ void Model::setB2(std::vector<float> in, int nRows)
 	M_B2 = Map<Matrix<float, Dynamic, Dynamic> >(in.data(), nRows, nCols);
 	//std::cout << "B2: " << std::endl;
 	//std::cout << M_B2 << std::endl;
+}
+
+void Model::setLoggerVerbosity(int verbosity)
+{
+	logger->setVerbosity(verbosity);
 }
 
 
