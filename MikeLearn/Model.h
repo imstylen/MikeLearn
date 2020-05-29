@@ -1,6 +1,7 @@
 #pragma once
 #include <Eigen/Dense>
 #include <vector>
+#include "Logger.h"
 
 class Model
 {
@@ -23,6 +24,8 @@ private:
 	Eigen::MatrixXf sigmoid(Eigen::MatrixXf x);
 	Eigen::MatrixXf dSigmoid(Eigen::MatrixXf sig);
 
+	Logger* logger;
+
 public:
 	Model(std::vector<float> xIn,int nInputs, std::vector<float> yIn,int nOutputs,int nHidden);
 
@@ -41,6 +44,8 @@ public:
 
 	void setB1(std::vector<float> in, int nRows);
 	void setB2(std::vector<float> in, int nRows);
+
+	void setLoggerVerbosity(int verbosity);
 
 };
 
