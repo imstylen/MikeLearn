@@ -27,6 +27,7 @@ print(len(Y))
 print("Learning")
 #Model(std::vector<float> xIn,int nInputs, std::vector<float> yIn,int nOutputs,int nHidden);
 M = MikeLearn.Model(X,nIn,Y,nOut,350)
+M.setLoggerVerbosity(1)
 FinalE = M.fit(36,0.5)
 print("Final Error: " + str(FinalE[0]))
 
