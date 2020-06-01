@@ -24,7 +24,7 @@ public:
 
 	void setLoggerVerbosity(int verbosity);
 
-	std::vector<float> predict(std::vector<float> x0);
+	std::vector<std::vector<float>> predict(std::vector<std::vector<float>> x0);
 
 };
 

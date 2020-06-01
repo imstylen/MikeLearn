@@ -14329,11 +14329,11 @@ fail:
 SWIGINTERN PyObject *_wrap_ClassificationOptimizer_predict(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   ClassificationOptimizer *arg1 = (ClassificationOptimizer *) 0 ;
-  std::vector< float,std::allocator< float > > arg2 ;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[2] ;
-  std::vector< float,std::allocator< float > > result;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > result;
   
   if (!SWIG_Python_UnpackTuple(args, "ClassificationOptimizer_predict", 2, 2, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ClassificationOptimizer, 0 |  0 );
@@ -14342,16 +14342,16 @@ SWIGINTERN PyObject *_wrap_ClassificationOptimizer_predict(PyObject *SWIGUNUSEDP
   }
   arg1 = reinterpret_cast< ClassificationOptimizer * >(argp1);
   {
-    std::vector< float,std::allocator< float > > *ptr = (std::vector< float,std::allocator< float > > *)0;
+    std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *ptr = (std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *)0;
     int res = swig::asptr(swig_obj[1], &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "ClassificationOptimizer_predict" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > >""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "ClassificationOptimizer_predict" "', argument " "2"" of type '" "std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > >""'"); 
     }
     arg2 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
   result = (arg1)->predict(arg2);
-  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  resultobj = swig::from(static_cast< std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > >(result));
   return resultobj;
 fail:
   return NULL;
