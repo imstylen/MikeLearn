@@ -352,4 +352,5 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-modeldata.p
+mnist_data.p
+minst_data.p
