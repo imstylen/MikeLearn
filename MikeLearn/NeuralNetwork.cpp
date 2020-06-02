@@ -1,6 +1,7 @@
 #include "NeuralNetwork.h"
 #include <unsupported/Eigen/MatrixFunctions>
 
+
 Eigen::MatrixXf NeuralNetwork::sigmoid(Eigen::MatrixXf x)
 {
 	Eigen::ArrayWrapper<Eigen::MatrixXf> A_T = x.array();
@@ -49,7 +50,7 @@ void NeuralNetwork::setLoggerVerbosity(int verbosity)
 	logger->setVerbosity(verbosity);
 }
 
-Eigen::MatrixXf NeuralNetwork::forward(Eigen::MatrixXf x0)
+Eigen::MatrixXf NeuralNetwork::forward(Eigen::MatrixXf& x0)
 {
 	X[0] = x0;
 	logger->LogVerbose("--------", "X", 0, "---------", X[0]);
@@ -62,37 +63,44 @@ Eigen::MatrixXf NeuralNetwork::forward(Eigen::MatrixXf x0)
 	return X[X.size()-1];
 }
 
-void NeuralNetwork::backward(Eigen::MatrixXf back, float learningRate)
+void NeuralNetwork::backward(Eigen::MatrixXf& back, float learningRate)
 {
 	std::vector<Eigen::MatrixXf> dedw;
 	std::vector<Eigen::MatrixXf> delta;
 
 	int nLayers = layers.size();
-
+	//logger->LogGeneral(nLayers);
 	int dIt = 0;
 	for (int i = nLayers -1;i > 0; i=i-1)
 	{
 		logger->LogVerbose("--------","Back", i,"---------");
+		Eigen::MatrixXf deltai;
 		if (i == (nLayers - 1))
 		{
-			delta.push_back(back.cwiseProduct(dSigmoid(X[i])));
+			deltai.noalias() = back.cwiseProduct(dSigmoid(X[i]));
+			delta.push_back(deltai);
 			dIt++;
 		
 		}
 		else
 		{
 			logger->LogVerbose("W", i);
-			delta.push_back((W[i].transpose() * delta[dIt-1]).cwiseProduct(dSigmoid(X[i])));
+			deltai.noalias() = (W[i].transpose() * delta[dIt - 1]).cwiseProduct(dSigmoid(X[i]));
+			delta.push_back(deltai);
 			dIt++;
 		}
 		
-		dedw.push_back(delta[dIt-1] * X[i - 1].transpose());
-		logger->LogVerbose("dedw", dIt - 1, dedw[dIt - 1]);
+		Eigen::MatrixXf dedwi;
+		dedwi.noalias() = delta[dIt - 1] * X[i - 1].transpose();
+		dedw.push_back(std::move(dedwi));
+		logger->LogVerbose("dedw", dIt - 1, &dedw[dIt - 1]);
 		
-		Eigen::MatrixXf WiNew = W[i-1] - learningRate * dedw[dIt - 1];
+		Eigen::MatrixXf WiNew;
+		WiNew.noalias() = W[i - 1] - learningRate * dedw[dIt - 1];
 		W[i-1] = WiNew;
+
 		logger->LogVerbose("W", i - 1);
-		logger->LogVerbose(W[i - 1]);
+		logger->LogVerbose(&W[i - 1]);
 
 		Eigen::MatrixXf BiNew = B[i-1] - learningRate * delta[dIt - 1];
 		B[i-1] = BiNew;
