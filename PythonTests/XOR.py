@@ -18,14 +18,14 @@ nOut = len(Y[0])
 #=======================================================
 verbosity = 0
 
-N = NeuralNetwork([nIn,2,2,2,nOut],['sigmoid','sigmoid','softmax'])
+N = NeuralNetwork([nIn,2,nOut],['sigmoid','sigmoid','softmax'])
 N.setLoggerVerbosity(verbosity)
 
 Opt = ClassificationOptimizer(N,X,Y)
 
 Opt.setLoggerVerbosity(verbosity)
 start_time = time.time();
-E = Opt.fit(5000000,0.1)
+E = Opt.fit(10000,0.1)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 #plt.plot(E)

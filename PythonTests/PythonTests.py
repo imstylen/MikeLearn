@@ -28,7 +28,7 @@ nOut = len(Y[0])
 #=======================================================
 verbosity = 1
 
-N = NeuralNetwork([nIn,100,100,100,100,nOut],['sigmoid','sigmoid','softmax'])
+N = NeuralNetwork([nIn,100,nOut],['sigmoid','sigmoid','softmax'])
 N.setLoggerVerbosity(verbosity)
 
 Opt = ClassificationOptimizer(N,X1,Y1)
