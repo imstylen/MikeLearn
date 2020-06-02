@@ -14058,10 +14058,10 @@ fail:
 SWIGINTERN PyObject *_wrap_NeuralNetwork_forward(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   NeuralNetwork *arg1 = (NeuralNetwork *) 0 ;
-  Eigen::MatrixXf arg2 ;
+  Eigen::MatrixXf *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
+  void *argp2 = 0 ;
   int res2 = 0 ;
   PyObject *swig_obj[2] ;
   Eigen::MatrixXf result;
@@ -14072,20 +14072,15 @@ SWIGINTERN PyObject *_wrap_NeuralNetwork_forward(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNetwork_forward" "', argument " "1"" of type '" "NeuralNetwork *""'"); 
   }
   arg1 = reinterpret_cast< NeuralNetwork * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Eigen__MatrixXf,  0  | 0);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "NeuralNetwork_forward" "', argument " "2"" of type '" "Eigen::MatrixXf""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "NeuralNetwork_forward" "', argument " "2"" of type '" "Eigen::MatrixXf""'");
-    } else {
-      Eigen::MatrixXf * temp = reinterpret_cast< Eigen::MatrixXf * >(argp2);
-      arg2 = *temp;
-      if (SWIG_IsNewObj(res2)) delete temp;
-    }
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Eigen__MatrixXf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "NeuralNetwork_forward" "', argument " "2"" of type '" "Eigen::MatrixXf &""'"); 
   }
-  result = (arg1)->forward(arg2);
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "NeuralNetwork_forward" "', argument " "2"" of type '" "Eigen::MatrixXf &""'"); 
+  }
+  arg2 = reinterpret_cast< Eigen::MatrixXf * >(argp2);
+  result = (arg1)->forward(*arg2);
   resultobj = SWIG_NewPointerObj((new Eigen::MatrixXf(static_cast< const Eigen::MatrixXf& >(result))), SWIGTYPE_p_Eigen__MatrixXf, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -14096,11 +14091,11 @@ fail:
 SWIGINTERN PyObject *_wrap_NeuralNetwork_backward(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   NeuralNetwork *arg1 = (NeuralNetwork *) 0 ;
-  Eigen::MatrixXf arg2 ;
+  Eigen::MatrixXf *arg2 = 0 ;
   float arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
+  void *argp2 = 0 ;
   int res2 = 0 ;
   float val3 ;
   int ecode3 = 0 ;
@@ -14112,25 +14107,20 @@ SWIGINTERN PyObject *_wrap_NeuralNetwork_backward(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNetwork_backward" "', argument " "1"" of type '" "NeuralNetwork *""'"); 
   }
   arg1 = reinterpret_cast< NeuralNetwork * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Eigen__MatrixXf,  0  | 0);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "NeuralNetwork_backward" "', argument " "2"" of type '" "Eigen::MatrixXf""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "NeuralNetwork_backward" "', argument " "2"" of type '" "Eigen::MatrixXf""'");
-    } else {
-      Eigen::MatrixXf * temp = reinterpret_cast< Eigen::MatrixXf * >(argp2);
-      arg2 = *temp;
-      if (SWIG_IsNewObj(res2)) delete temp;
-    }
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2, SWIGTYPE_p_Eigen__MatrixXf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "NeuralNetwork_backward" "', argument " "2"" of type '" "Eigen::MatrixXf &""'"); 
   }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "NeuralNetwork_backward" "', argument " "2"" of type '" "Eigen::MatrixXf &""'"); 
+  }
+  arg2 = reinterpret_cast< Eigen::MatrixXf * >(argp2);
   ecode3 = SWIG_AsVal_float(swig_obj[2], &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "NeuralNetwork_backward" "', argument " "3"" of type '" "float""'");
   } 
   arg3 = static_cast< float >(val3);
-  (arg1)->backward(arg2,arg3);
+  (arg1)->backward(*arg2,arg3);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:

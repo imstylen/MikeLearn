@@ -28,7 +28,9 @@ std::vector<float> ClassificationOptimizer::fit(int nEpochs, float learningRate)
 			Eigen::MatrixXf Y = Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> >(yTrain[j].data(), neuralNetwork->GetNumOutputs(), 1);
 			logger->LogVerbose("----------", "Y", "-----------", Y);
 
-			float ei = (XL - Y).norm();
+			Eigen::MatrixXf e = XL - Y;
+
+			float ei = (e).norm();
 			ei = ei * ei;
 			logger->LogVerbose("Error:", ei);
 
@@ -39,7 +41,7 @@ std::vector<float> ClassificationOptimizer::fit(int nEpochs, float learningRate)
 
 			E.push_back(ei);
 
-			neuralNetwork->backward(XL - Y, learningRate);
+			neuralNetwork->backward(e, learningRate);
 
 		}
 	}
