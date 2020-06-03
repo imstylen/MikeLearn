@@ -63,7 +63,7 @@ Opt.setLoggerVerbosity(verbosity)
 start_time = time.time();
 #fit data
 #fit(nEpoch,LearningRate,lambda)
-E = Opt.fit(20,0.1,0.00)
+E = Opt.fit(10,0.1,0.00)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 #================================

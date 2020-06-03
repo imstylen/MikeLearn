@@ -155,7 +155,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
     <ClCompile Include="ClassificationOptimizer.cpp" />
+    <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MikeLearn.cpp" />
     <ClCompile Include="MikeLearn_wrap.cxx" />
@@ -163,7 +165,9 @@
     <ClCompile Include="NeuralNetwork.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Agent.h" />
     <ClInclude Include="ClassificationOptimizer.h" />
+    <ClInclude Include="Environment.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MikeLearn.h" />
     <ClInclude Include="Model.h" />
