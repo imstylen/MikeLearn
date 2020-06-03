@@ -52,7 +52,7 @@ verbosity = 1
 
 #Initualize neural network
 # NeuralNetwork([nInputs, nHidden1, nHidden2,..,nOutputs],['Activation1','Activation2'...]
-N = NeuralNetwork([nIn,50,nOut],['sigmoid','sigmoid'])
+N = NeuralNetwork([nIn,20,20,20,nOut],['sigmoid','sigmoid'])
 N.setLoggerVerbosity(verbosity)
 
 #Initialize optimizer
@@ -62,8 +62,8 @@ Opt.setLoggerVerbosity(verbosity)
 
 start_time = time.time();
 #fit data
-#fit(nEpoch,LearningRate)
-E = Opt.fit(10,0.1)
+#fit(nEpoch,LearningRate,lambda)
+E = Opt.fit(20,0.1,0.00)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 #================================
@@ -73,7 +73,7 @@ XL = Opt.predict(X1)
 
 correct = 0
 for i,x in enumerate(XL):
-    if XL[i].index(max(XL[i])) == Y[i].index(max(Y1[i])):
+    if XL[i].index(max(XL[i])) == Y1[i].index(max(Y1[i])):
         correct = correct + 1
 
 print("Training set Correct = " +  str(correct))
@@ -87,7 +87,7 @@ XL = Opt.predict(X2)
 
 correct = 0
 for i,x in enumerate(XL):
-    if XL[i].index(max(XL[i])) == Y[i].index(max(Y2[i])):
+    if XL[i].index(max(XL[i])) == Y2[i].index(max(Y2[i])):
         correct = correct + 1
 
 print("Testing set Correct = " +  str(correct))

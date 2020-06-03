@@ -63,7 +63,7 @@ Eigen::MatrixXf NeuralNetwork::forward(Eigen::MatrixXf& x0)
 	return X[X.size()-1];
 }
 
-void NeuralNetwork::backward(Eigen::MatrixXf& back, float learningRate)
+void NeuralNetwork::backward(Eigen::MatrixXf& back, float learningRate, float lambda)
 {
 	std::vector<Eigen::MatrixXf> dedw;
 	std::vector<Eigen::MatrixXf> delta;
@@ -93,14 +93,14 @@ void NeuralNetwork::backward(Eigen::MatrixXf& back, float learningRate)
 		Eigen::MatrixXf dedwi;
 		dedwi.noalias() = delta[dIt - 1] * X[i - 1].transpose();
 		dedw.push_back(std::move(dedwi));
-		logger->LogVerbose("dedw", dIt - 1, &dedw[dIt - 1]);
+		//logger->LogVerbose("dedw", dIt - 1, dedw[dIt - 1]);
 		
 		Eigen::MatrixXf WiNew;
-		WiNew.noalias() = W[i - 1] - learningRate * dedw[dIt - 1];
+		WiNew.noalias() = W[i - 1] - learningRate * dedw[dIt - 1] - lambda* W[i - 1];
 		W[i-1] = WiNew;
 
 		logger->LogVerbose("W", i - 1);
-		logger->LogVerbose(&W[i - 1]);
+		//logger->LogVerbose(W[i - 1]);
 
 		Eigen::MatrixXf BiNew = B[i-1] - learningRate * delta[dIt - 1];
 		B[i-1] = BiNew;

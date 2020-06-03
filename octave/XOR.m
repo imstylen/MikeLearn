@@ -20,7 +20,7 @@ Y = [0;
     
  index = 1
  
- for epoch = 1:200
+ for epoch = 1:10000
      for i = 1:length(X)
 
         x0 = X(i,:)';
@@ -45,15 +45,14 @@ Y = [0;
 
         B2 = B2 - alpha*delta2;
         B1 = B1 - alpha*delta1;
+        
+         E(index) = norm(x2-t)^2;
+         E(index);
+         index = index + 1;
 
      end
      
-     if mod(epoch,100) == 0
-         E(index) = norm(x2-t)^2;
-         E(index)
-         index = index + 1;
-         
-     end
+
      
  end
  

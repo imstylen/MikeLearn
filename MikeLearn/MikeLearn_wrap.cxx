@@ -14093,15 +14093,18 @@ SWIGINTERN PyObject *_wrap_NeuralNetwork_backward(PyObject *SWIGUNUSEDPARM(self)
   NeuralNetwork *arg1 = (NeuralNetwork *) 0 ;
   Eigen::MatrixXf *arg2 = 0 ;
   float arg3 ;
+  float arg4 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 = 0 ;
   int res2 = 0 ;
   float val3 ;
   int ecode3 = 0 ;
-  PyObject *swig_obj[3] ;
+  float val4 ;
+  int ecode4 = 0 ;
+  PyObject *swig_obj[4] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "NeuralNetwork_backward", 3, 3, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "NeuralNetwork_backward", 4, 4, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNetwork, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNetwork_backward" "', argument " "1"" of type '" "NeuralNetwork *""'"); 
@@ -14120,7 +14123,12 @@ SWIGINTERN PyObject *_wrap_NeuralNetwork_backward(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "NeuralNetwork_backward" "', argument " "3"" of type '" "float""'");
   } 
   arg3 = static_cast< float >(val3);
-  (arg1)->backward(*arg2,arg3);
+  ecode4 = SWIG_AsVal_float(swig_obj[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "NeuralNetwork_backward" "', argument " "4"" of type '" "float""'");
+  } 
+  arg4 = static_cast< float >(val4);
+  (arg1)->backward(*arg2,arg3,arg4);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -14254,16 +14262,19 @@ SWIGINTERN PyObject *_wrap_ClassificationOptimizer_fit(PyObject *SWIGUNUSEDPARM(
   ClassificationOptimizer *arg1 = (ClassificationOptimizer *) 0 ;
   int arg2 ;
   float arg3 ;
+  float arg4 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int val2 ;
   int ecode2 = 0 ;
   float val3 ;
   int ecode3 = 0 ;
-  PyObject *swig_obj[3] ;
+  float val4 ;
+  int ecode4 = 0 ;
+  PyObject *swig_obj[4] ;
   std::vector< float,std::allocator< float > > result;
   
-  if (!SWIG_Python_UnpackTuple(args, "ClassificationOptimizer_fit", 3, 3, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "ClassificationOptimizer_fit", 4, 4, swig_obj)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ClassificationOptimizer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ClassificationOptimizer_fit" "', argument " "1"" of type '" "ClassificationOptimizer *""'"); 
@@ -14279,7 +14290,12 @@ SWIGINTERN PyObject *_wrap_ClassificationOptimizer_fit(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ClassificationOptimizer_fit" "', argument " "3"" of type '" "float""'");
   } 
   arg3 = static_cast< float >(val3);
-  result = (arg1)->fit(arg2,arg3);
+  ecode4 = SWIG_AsVal_float(swig_obj[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "ClassificationOptimizer_fit" "', argument " "4"" of type '" "float""'");
+  } 
+  arg4 = static_cast< float >(val4);
+  result = (arg1)->fit(arg2,arg3,arg4);
   resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
   return resultobj;
 fail:

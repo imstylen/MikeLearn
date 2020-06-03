@@ -10,7 +10,7 @@ ClassificationOptimizer::ClassificationOptimizer(NeuralNetwork* neuralNetwork, s
 
 }
 
-std::vector<float> ClassificationOptimizer::fit(int nEpochs, float learningRate)
+std::vector<float> ClassificationOptimizer::fit(int nEpochs, float learningRate, float lambda)
 {
 	std::vector<float> E;
 
@@ -41,7 +41,7 @@ std::vector<float> ClassificationOptimizer::fit(int nEpochs, float learningRate)
 
 			E.push_back(ei);
 
-			neuralNetwork->backward(e, learningRate);
+			neuralNetwork->backward(e, learningRate, lambda);
 
 		}
 	}

@@ -1,5 +1,7 @@
 from MikeLearn import NeuralNetwork
 from MikeLearn import ClassificationOptimizer
+import matplotlib
+import matplotlib.pyplot as plt
 import time
 
 #=======================================================
@@ -30,9 +32,15 @@ Opt.setLoggerVerbosity(verbosity)
 start_time = time.time();
 
 #fit data
-#fit(nEpoch,LearningRate)
-E = Opt.fit(10000,0.1)
+#fit(nEpoch,LearningRate,lambda)
+E = Opt.fit(10000,0.1,0.0)
 print("--- %s seconds ---" % (time.time() - start_time))
+
+fig, ax = plt.subplots()
+ax.plot(E)
+ax.grid()
+#fig.savefig("test.png")
+plt.show()
 
 print(Opt.predict(X))
 

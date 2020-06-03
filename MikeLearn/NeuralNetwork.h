@@ -25,7 +25,7 @@ public:
 	NeuralNetwork(std::vector<int> layers, std::vector<std::string> Activations);
 	void setLoggerVerbosity(int verbosity);
 	Eigen::MatrixXf forward(Eigen::MatrixXf& x0);
-	void backward(Eigen::MatrixXf& back, float learningRate);
+	void backward(Eigen::MatrixXf& back, float learningRate, float lambda);
 
 	
 	int GetNumInputs();

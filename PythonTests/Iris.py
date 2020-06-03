@@ -2,11 +2,14 @@ from MikeLearn import NeuralNetwork
 from MikeLearn import ClassificationOptimizer
 import random
 import time
+import matplotlib
+import matplotlib.pyplot as plt
 
+
+makeplot = False
 #=======================================================
 # Data Set
 #=======================================================
-
 data = open('iris.data','r').read().split('\n')
 data = [line.split(',') for line in data]
 random.shuffle(data)
@@ -54,9 +57,16 @@ Opt.setLoggerVerbosity(verbosity)
 
 start_time = time.time();
 #fit data
-#fit(nEpoch,LearningRate)
-E = Opt.fit(1000,0.1)
+#fit(nEpoch,LearningRate, lambda)
+E = Opt.fit(1000,0.1, 0.0001)
 print("--- %s seconds ---" % (time.time() - start_time))
+
+if makeplot == True:
+    fig, ax = plt.subplots()
+    ax.plot(E)
+    ax.grid()
+    #fig.savefig("test.png")
+    plt.show()
 
 #================================
 #Final Accuracy on training set
@@ -65,7 +75,7 @@ XL = Opt.predict(X1)
 
 correct = 0
 for i,x in enumerate(XL):
-    if XL[i].index(max(XL[i])) == Y[i].index(max(Y1[i])):
+    if XL[i].index(max(XL[i])) == Y1[i].index(max(Y1[i])):
         correct = correct + 1
 
 print("Training set Correct = " +  str(correct))
@@ -79,7 +89,7 @@ XL = Opt.predict(X2)
 
 correct = 0
 for i,x in enumerate(XL):
-    if XL[i].index(max(XL[i])) == Y[i].index(max(Y2[i])):
+    if XL[i].index(max(XL[i])) == Y2[i].index(max(Y2[i])):
         correct = correct + 1
 
 print("Testing set Correct = " +  str(correct))

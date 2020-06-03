@@ -20,7 +20,7 @@ public:
 							std::vector<std::vector<float>> xtrain,
 							std::vector<std::vector<float>> ytrain);
 
-	std::vector<float> fit(int nEpochs, float learningRate);
+	std::vector<float> fit(int nEpochs, float learningRate,float lambda);
 
 	void setLoggerVerbosity(int verbosity);
 
