@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6ee22c43-0420-4660-bece-5d4a9ef946a5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>XOR.py</StartupFile>
+    <StartupFile>Iris.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Iris.py" />
     <Compile Include="XOR.py">
       <SubType>Code</SubType>
     </Compile>
