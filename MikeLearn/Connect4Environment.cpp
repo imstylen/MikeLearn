@@ -1,6 +1,6 @@
-#include "Environment.h"
+#include "Connect4Environment.h"
 
-Environment::Environment(int xDim, int yDim, std::vector<Agent*> agents)
+Connect4Environment::Connect4Environment(int xDim, int yDim, std::vector<Agent*> agents)
 {
 	this->xDim = xDim;
 	this->yDim = yDim;
@@ -19,7 +19,7 @@ Environment::Environment(int xDim, int yDim, std::vector<Agent*> agents)
 	loop();
 }
 
-void Environment::loop()
+void Connect4Environment::loop()
 {
 	while (gameOver == false)
 	{
@@ -40,7 +40,7 @@ void Environment::loop()
 
 }
 
-void Environment::move(float player, int column)
+void Connect4Environment::move(float player, int column)
 {
 	for (int i = 0; i < yDim; i++)
 	{
@@ -60,7 +60,7 @@ void Environment::move(float player, int column)
 	}
 }
 
-void Environment::printBoard()
+void Connect4Environment::printBoard()
 {
 	std::cout << std::string(100, '\n');
 	std::cout << "0 1 2 3 4 5 6" << std::endl;
@@ -90,7 +90,7 @@ void Environment::printBoard()
 	
 }
 
-bool Environment::checkGameOver(float player, int x, int y)
+bool Connect4Environment::checkGameOver(float player, int x, int y)
 {
 
 	int xi = x;
@@ -280,6 +280,7 @@ bool Environment::checkGameOver(float player, int x, int y)
 	{
 		return true;
 	}
+
 	//NW
 	xi = x;
 	yi = y;

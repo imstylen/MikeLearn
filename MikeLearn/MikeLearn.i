@@ -18,6 +18,7 @@ namespace std {
 %include "Logger.h"
 %include "NeuralNetwork.h"
 %include "ClassificationOptimizer.h"
-%include "Environment.h"
+%include "Connect4Environment.h"
+%include "ReinforcementClassificationOptimizer.h"
 
 

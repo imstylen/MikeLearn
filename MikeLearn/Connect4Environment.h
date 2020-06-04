@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-class Environment
+class Connect4Environment
 {
 
 private:
@@ -15,7 +15,7 @@ private:
 protected:
 
 public:
-	Environment(int xDim, int yDim, std::vector<Agent*> agents);
+	Connect4Environment(int xDim, int yDim, std::vector<Agent*> agents);
 	void loop();
 	void move(float player, int column);
 	void printBoard();
