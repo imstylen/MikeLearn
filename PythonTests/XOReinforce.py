@@ -3,16 +3,41 @@ from MikeLearn import ReinforcementClassificationOptimizer
 import matplotlib
 import matplotlib.pyplot as plt
 import time
+import random
 
 #=======================================================
 # Training Set
 #=======================================================
 
-X = [[0,1],[1,0],[1,1],[0,0]]
-Y = [[1],[1],[0],[0]]
+data = open('iris.data','r').read().split('\n')
+data = [line.split(',') for line in data]
+random.shuffle(data)
 
-nIn = len(X[0])
-nOut = len(Y[0])
+X = list();
+Y = list();
+
+for line in data:
+    if len(line)>1:
+        X.append([float(i) for i in line[0:4]])
+        if "setosa" in line[4]:
+            Y.append([1,0,0])
+        elif "versicolor" in line[4]:
+            Y.append([0,1,0])
+        else:
+            Y.append([0,0,1])
+
+
+#training set
+X1 = X[0:100]
+Y1 = Y[0:100]
+
+#validation set
+X2 = X[101:]
+Y2 = Y[101:]
+
+#number of inputs/outputs
+nIn = len(X[0]) #~750
+nOut = len(Y[0]) #=10
 
 #=======================================================
 # Model
@@ -21,7 +46,7 @@ verbosity = 0
 
 #Initualize neural network
 # NeuralNetwork([nInputs, nHidden1, nHidden2,..,nOutputs],['Activation1','Activation2'...]
-N = NeuralNetwork([nIn,2,nOut],['sigmoid','sigmoid','softmax'])
+N = NeuralNetwork([nIn,4,nOut],['sigmoid','sigmoid'])
 N.setLoggerVerbosity(verbosity)
 
 #Initialize the classification optimizer
@@ -33,10 +58,10 @@ start_time = time.time();
 
 #fit data
 #fit(nEpoch,LearningRate,lambda)
-E = Opt.fit(100000,100,1,0.0)
+E = Opt.fit(100000,10,0.001,0.0)
 print("--- %s seconds ---" % (time.time() - start_time))
-Opt.setLoggerVerbosity(1)
-Opt.fit(1,5,10,0.0)
+Opt.setLoggerVerbosity(3)
+Opt.fit(1,5,0.01,0.0)
 
 fig, ax = plt.subplots()
 ax.plot(E)

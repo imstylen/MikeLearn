@@ -51,18 +51,22 @@ std::vector<float> ReinforcementClassificationOptimizer::fit(int nEpochs, int ep
 			logger->LogVerbose("Prediction: ", prediction);
 			if (prediction.isApprox(Y))
 			{
-				currentReward += 100;
+				currentReward += 1;
 			}
 			else
 			{
-				currentReward -= 100;
+				currentReward -= 1;
 			}
 
 			logger->LogGeneral("CurrentReward", currentReward);
 
 			cumulativeReward.push_back(currentReward);
+			
+			//theta = theta + alpha*grad(J(theta))
+			//grad(J(theta)) = grad(log(pi(theta))*Vt
+			//				 = Vt/(pi(theta))*d(pi)/d(theta)
 
-			Eigen::MatrixXf e = XL - prediction;
+			Eigen::MatrixXf e = XL.cwiseInverse();
 			logPolicies.push_back(e);
 
 			float ei = (e).norm();
