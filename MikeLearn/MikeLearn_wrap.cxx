@@ -2662,31 +2662,32 @@ SWIGINTERN PyObject *SWIG_PyStaticMethod_New(PyObject *SWIGUNUSEDPARM(self), PyO
 
 #define SWIGTYPE_p_Agent swig_types[0]
 #define SWIGTYPE_p_ClassificationOptimizer swig_types[1]
-#define SWIGTYPE_p_Eigen__MatrixXf swig_types[2]
-#define SWIGTYPE_p_Environment swig_types[3]
+#define SWIGTYPE_p_Connect4Environment swig_types[2]
+#define SWIGTYPE_p_Eigen__MatrixXf swig_types[3]
 #define SWIGTYPE_p_Logger swig_types[4]
 #define SWIGTYPE_p_Model swig_types[5]
 #define SWIGTYPE_p_NeuralNetwork swig_types[6]
-#define SWIGTYPE_p_allocator_type swig_types[7]
-#define SWIGTYPE_p_char swig_types[8]
-#define SWIGTYPE_p_difference_type swig_types[9]
-#define SWIGTYPE_p_p_PyObject swig_types[10]
-#define SWIGTYPE_p_size_type swig_types[11]
-#define SWIGTYPE_p_std__allocatorT_Agent_p_t swig_types[12]
-#define SWIGTYPE_p_std__allocatorT_float_t swig_types[13]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[14]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[15]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t swig_types[16]
-#define SWIGTYPE_p_std__invalid_argument swig_types[17]
-#define SWIGTYPE_p_std__vectorT_Agent_p_std__allocatorT_Agent_p_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[19]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[20]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[21]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_float_std__allocatorT_float_t_t_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t_t swig_types[22]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[23]
-#define SWIGTYPE_p_value_type swig_types[24]
-static swig_type_info *swig_types[26];
-static swig_module_info swig_module = {swig_types, 25, 0, 0, 0, 0};
+#define SWIGTYPE_p_ReinforcementClassificationOptimizer swig_types[7]
+#define SWIGTYPE_p_allocator_type swig_types[8]
+#define SWIGTYPE_p_char swig_types[9]
+#define SWIGTYPE_p_difference_type swig_types[10]
+#define SWIGTYPE_p_p_PyObject swig_types[11]
+#define SWIGTYPE_p_size_type swig_types[12]
+#define SWIGTYPE_p_std__allocatorT_Agent_p_t swig_types[13]
+#define SWIGTYPE_p_std__allocatorT_float_t swig_types[14]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[15]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[16]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t swig_types[17]
+#define SWIGTYPE_p_std__invalid_argument swig_types[18]
+#define SWIGTYPE_p_std__vectorT_Agent_p_std__allocatorT_Agent_p_t_t swig_types[19]
+#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[20]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[21]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[22]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_float_std__allocatorT_float_t_t_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t_t swig_types[23]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[24]
+#define SWIGTYPE_p_value_type swig_types[25]
+static swig_type_info *swig_types[27];
+static swig_module_info swig_module = {swig_types, 26, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -16356,7 +16357,7 @@ SWIGINTERN PyObject *ClassificationOptimizer_swiginit(PyObject *SWIGUNUSEDPARM(s
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_new_Environment(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_new_Connect4Environment(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   int arg1 ;
   int arg2 ;
@@ -16366,50 +16367,50 @@ SWIGINTERN PyObject *_wrap_new_Environment(PyObject *SWIGUNUSEDPARM(self), PyObj
   int val2 ;
   int ecode2 = 0 ;
   PyObject *swig_obj[3] ;
-  Environment *result = 0 ;
+  Connect4Environment *result = 0 ;
   
-  if (!SWIG_Python_UnpackTuple(args, "new_Environment", 3, 3, swig_obj)) SWIG_fail;
+  if (!SWIG_Python_UnpackTuple(args, "new_Connect4Environment", 3, 3, swig_obj)) SWIG_fail;
   ecode1 = SWIG_AsVal_int(swig_obj[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_Environment" "', argument " "1"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_Connect4Environment" "', argument " "1"" of type '" "int""'");
   } 
   arg1 = static_cast< int >(val1);
   ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_Environment" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_Connect4Environment" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   {
     std::vector< Agent*,std::allocator< Agent * > > *ptr = (std::vector< Agent*,std::allocator< Agent * > > *)0;
     int res = swig::asptr(swig_obj[2], &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_Environment" "', argument " "3"" of type '" "std::vector< Agent *,std::allocator< Agent * > >""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_Connect4Environment" "', argument " "3"" of type '" "std::vector< Agent *,std::allocator< Agent * > >""'"); 
     }
     arg3 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (Environment *)new Environment(arg1,arg2,arg3);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Environment, SWIG_POINTER_NEW |  0 );
+  result = (Connect4Environment *)new Connect4Environment(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Connect4Environment, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_Environment_loop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Connect4Environment_loop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  Environment *arg1 = (Environment *) 0 ;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Environment, 0 |  0 );
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Environment_loop" "', argument " "1"" of type '" "Environment *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Connect4Environment_loop" "', argument " "1"" of type '" "Connect4Environment *""'"); 
   }
-  arg1 = reinterpret_cast< Environment * >(argp1);
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
   (arg1)->loop();
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -16418,9 +16419,9 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Environment_move(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Connect4Environment_move(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  Environment *arg1 = (Environment *) 0 ;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
   float arg2 ;
   int arg3 ;
   void *argp1 = 0 ;
@@ -16431,20 +16432,20 @@ SWIGINTERN PyObject *_wrap_Environment_move(PyObject *SWIGUNUSEDPARM(self), PyOb
   int ecode3 = 0 ;
   PyObject *swig_obj[3] ;
   
-  if (!SWIG_Python_UnpackTuple(args, "Environment_move", 3, 3, swig_obj)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Environment, 0 |  0 );
+  if (!SWIG_Python_UnpackTuple(args, "Connect4Environment_move", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Environment_move" "', argument " "1"" of type '" "Environment *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Connect4Environment_move" "', argument " "1"" of type '" "Connect4Environment *""'"); 
   }
-  arg1 = reinterpret_cast< Environment * >(argp1);
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
   ecode2 = SWIG_AsVal_float(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Environment_move" "', argument " "2"" of type '" "float""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Connect4Environment_move" "', argument " "2"" of type '" "float""'");
   } 
   arg2 = static_cast< float >(val2);
   ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Environment_move" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Connect4Environment_move" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
   (arg1)->move(arg2,arg3);
@@ -16455,20 +16456,20 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Environment_printBoard(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Connect4Environment_printBoard(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  Environment *arg1 = (Environment *) 0 ;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Environment, 0 |  0 );
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Environment_printBoard" "', argument " "1"" of type '" "Environment *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Connect4Environment_printBoard" "', argument " "1"" of type '" "Connect4Environment *""'"); 
   }
-  arg1 = reinterpret_cast< Environment * >(argp1);
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
   (arg1)->printBoard();
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -16477,9 +16478,9 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Environment_checkGameOver(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Connect4Environment_checkGameOver(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  Environment *arg1 = (Environment *) 0 ;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
   float arg2 ;
   int arg3 ;
   int arg4 ;
@@ -16494,25 +16495,25 @@ SWIGINTERN PyObject *_wrap_Environment_checkGameOver(PyObject *SWIGUNUSEDPARM(se
   PyObject *swig_obj[4] ;
   bool result;
   
-  if (!SWIG_Python_UnpackTuple(args, "Environment_checkGameOver", 4, 4, swig_obj)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Environment, 0 |  0 );
+  if (!SWIG_Python_UnpackTuple(args, "Connect4Environment_checkGameOver", 4, 4, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Environment_checkGameOver" "', argument " "1"" of type '" "Environment *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Connect4Environment_checkGameOver" "', argument " "1"" of type '" "Connect4Environment *""'"); 
   }
-  arg1 = reinterpret_cast< Environment * >(argp1);
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
   ecode2 = SWIG_AsVal_float(swig_obj[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Environment_checkGameOver" "', argument " "2"" of type '" "float""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Connect4Environment_checkGameOver" "', argument " "2"" of type '" "float""'");
   } 
   arg2 = static_cast< float >(val2);
   ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Environment_checkGameOver" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Connect4Environment_checkGameOver" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
   ecode4 = SWIG_AsVal_int(swig_obj[3], &val4);
   if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Environment_checkGameOver" "', argument " "4"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Connect4Environment_checkGameOver" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
   result = (bool)(arg1)->checkGameOver(arg2,arg3,arg4);
@@ -16523,20 +16524,20 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_delete_Environment(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_delete_Connect4Environment(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  Environment *arg1 = (Environment *) 0 ;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject *swig_obj[1] ;
   
   if (!args) SWIG_fail;
   swig_obj[0] = args;
-  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Environment, SWIG_POINTER_DISOWN |  0 );
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, SWIG_POINTER_DISOWN |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Environment" "', argument " "1"" of type '" "Environment *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Connect4Environment" "', argument " "1"" of type '" "Connect4Environment *""'"); 
   }
-  arg1 = reinterpret_cast< Environment * >(argp1);
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
   delete arg1;
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -16545,14 +16546,204 @@ fail:
 }
 
 
-SWIGINTERN PyObject *Environment_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *Connect4Environment_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *obj;
   if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_Environment, SWIG_NewClientData(obj));
+  SWIG_TypeNewClientData(SWIGTYPE_p_Connect4Environment, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *Environment_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *Connect4Environment_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
+SWIGINTERN PyObject *_wrap_new_ReinforcementClassificationOptimizer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NeuralNetwork *arg1 = (NeuralNetwork *) 0 ;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > arg2 ;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[3] ;
+  ReinforcementClassificationOptimizer *result = 0 ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "new_ReinforcementClassificationOptimizer", 3, 3, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNetwork, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ReinforcementClassificationOptimizer" "', argument " "1"" of type '" "NeuralNetwork *""'"); 
+  }
+  arg1 = reinterpret_cast< NeuralNetwork * >(argp1);
+  {
+    std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *ptr = (std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_ReinforcementClassificationOptimizer" "', argument " "2"" of type '" "std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *ptr = (std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *)0;
+    int res = swig::asptr(swig_obj[2], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_ReinforcementClassificationOptimizer" "', argument " "3"" of type '" "std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > >""'"); 
+    }
+    arg3 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (ReinforcementClassificationOptimizer *)new ReinforcementClassificationOptimizer(arg1,arg2,arg3);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ReinforcementClassificationOptimizer, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ReinforcementClassificationOptimizer_fit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ReinforcementClassificationOptimizer *arg1 = (ReinforcementClassificationOptimizer *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  float arg4 ;
+  float arg5 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  float val4 ;
+  int ecode4 = 0 ;
+  float val5 ;
+  int ecode5 = 0 ;
+  PyObject *swig_obj[5] ;
+  std::vector< float,std::allocator< float > > result;
+  
+  if (!SWIG_Python_UnpackTuple(args, "ReinforcementClassificationOptimizer_fit", 5, 5, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ReinforcementClassificationOptimizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ReinforcementClassificationOptimizer_fit" "', argument " "1"" of type '" "ReinforcementClassificationOptimizer *""'"); 
+  }
+  arg1 = reinterpret_cast< ReinforcementClassificationOptimizer * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ReinforcementClassificationOptimizer_fit" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "ReinforcementClassificationOptimizer_fit" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_float(swig_obj[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "ReinforcementClassificationOptimizer_fit" "', argument " "4"" of type '" "float""'");
+  } 
+  arg4 = static_cast< float >(val4);
+  ecode5 = SWIG_AsVal_float(swig_obj[4], &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "ReinforcementClassificationOptimizer_fit" "', argument " "5"" of type '" "float""'");
+  } 
+  arg5 = static_cast< float >(val5);
+  result = (arg1)->fit(arg2,arg3,arg4,arg5);
+  resultobj = swig::from(static_cast< std::vector< float,std::allocator< float > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ReinforcementClassificationOptimizer_setLoggerVerbosity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ReinforcementClassificationOptimizer *arg1 = (ReinforcementClassificationOptimizer *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "ReinforcementClassificationOptimizer_setLoggerVerbosity", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ReinforcementClassificationOptimizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ReinforcementClassificationOptimizer_setLoggerVerbosity" "', argument " "1"" of type '" "ReinforcementClassificationOptimizer *""'"); 
+  }
+  arg1 = reinterpret_cast< ReinforcementClassificationOptimizer * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ReinforcementClassificationOptimizer_setLoggerVerbosity" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setLoggerVerbosity(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ReinforcementClassificationOptimizer_predict(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ReinforcementClassificationOptimizer *arg1 = (ReinforcementClassificationOptimizer *) 0 ;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[2] ;
+  std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > result;
+  
+  if (!SWIG_Python_UnpackTuple(args, "ReinforcementClassificationOptimizer_predict", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ReinforcementClassificationOptimizer, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ReinforcementClassificationOptimizer_predict" "', argument " "1"" of type '" "ReinforcementClassificationOptimizer *""'"); 
+  }
+  arg1 = reinterpret_cast< ReinforcementClassificationOptimizer * >(argp1);
+  {
+    std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *ptr = (std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "ReinforcementClassificationOptimizer_predict" "', argument " "2"" of type '" "std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (arg1)->predict(arg2);
+  resultobj = swig::from(static_cast< std::vector< std::vector< float,std::allocator< float > >,std::allocator< std::vector< float,std::allocator< float > > > > >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_ReinforcementClassificationOptimizer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ReinforcementClassificationOptimizer *arg1 = (ReinforcementClassificationOptimizer *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ReinforcementClassificationOptimizer, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ReinforcementClassificationOptimizer" "', argument " "1"" of type '" "ReinforcementClassificationOptimizer *""'"); 
+  }
+  arg1 = reinterpret_cast< ReinforcementClassificationOptimizer * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *ReinforcementClassificationOptimizer_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_ReinforcementClassificationOptimizer, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *ReinforcementClassificationOptimizer_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   return SWIG_Python_InitShadowInstance(args);
 }
 
@@ -16791,14 +16982,21 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_ClassificationOptimizer", _wrap_delete_ClassificationOptimizer, METH_O, NULL},
 	 { "ClassificationOptimizer_swigregister", ClassificationOptimizer_swigregister, METH_O, NULL},
 	 { "ClassificationOptimizer_swiginit", ClassificationOptimizer_swiginit, METH_VARARGS, NULL},
-	 { "new_Environment", _wrap_new_Environment, METH_VARARGS, NULL},
-	 { "Environment_loop", _wrap_Environment_loop, METH_O, NULL},
-	 { "Environment_move", _wrap_Environment_move, METH_VARARGS, NULL},
-	 { "Environment_printBoard", _wrap_Environment_printBoard, METH_O, NULL},
-	 { "Environment_checkGameOver", _wrap_Environment_checkGameOver, METH_VARARGS, NULL},
-	 { "delete_Environment", _wrap_delete_Environment, METH_O, NULL},
-	 { "Environment_swigregister", Environment_swigregister, METH_O, NULL},
-	 { "Environment_swiginit", Environment_swiginit, METH_VARARGS, NULL},
+	 { "new_Connect4Environment", _wrap_new_Connect4Environment, METH_VARARGS, NULL},
+	 { "Connect4Environment_loop", _wrap_Connect4Environment_loop, METH_O, NULL},
+	 { "Connect4Environment_move", _wrap_Connect4Environment_move, METH_VARARGS, NULL},
+	 { "Connect4Environment_printBoard", _wrap_Connect4Environment_printBoard, METH_O, NULL},
+	 { "Connect4Environment_checkGameOver", _wrap_Connect4Environment_checkGameOver, METH_VARARGS, NULL},
+	 { "delete_Connect4Environment", _wrap_delete_Connect4Environment, METH_O, NULL},
+	 { "Connect4Environment_swigregister", Connect4Environment_swigregister, METH_O, NULL},
+	 { "Connect4Environment_swiginit", Connect4Environment_swiginit, METH_VARARGS, NULL},
+	 { "new_ReinforcementClassificationOptimizer", _wrap_new_ReinforcementClassificationOptimizer, METH_VARARGS, NULL},
+	 { "ReinforcementClassificationOptimizer_fit", _wrap_ReinforcementClassificationOptimizer_fit, METH_VARARGS, NULL},
+	 { "ReinforcementClassificationOptimizer_setLoggerVerbosity", _wrap_ReinforcementClassificationOptimizer_setLoggerVerbosity, METH_VARARGS, NULL},
+	 { "ReinforcementClassificationOptimizer_predict", _wrap_ReinforcementClassificationOptimizer_predict, METH_VARARGS, NULL},
+	 { "delete_ReinforcementClassificationOptimizer", _wrap_delete_ReinforcementClassificationOptimizer, METH_O, NULL},
+	 { "ReinforcementClassificationOptimizer_swigregister", ReinforcementClassificationOptimizer_swigregister, METH_O, NULL},
+	 { "ReinforcementClassificationOptimizer_swiginit", ReinforcementClassificationOptimizer_swiginit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -16811,11 +17009,12 @@ static PyMethodDef SwigMethods_proxydocs[] = {
 
 static swig_type_info _swigt__p_Agent = {"_p_Agent", "std::vector< Agent * >::value_type|Agent *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ClassificationOptimizer = {"_p_ClassificationOptimizer", "ClassificationOptimizer *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Connect4Environment = {"_p_Connect4Environment", "Connect4Environment *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Eigen__MatrixXf = {"_p_Eigen__MatrixXf", "Eigen::MatrixXf *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Environment = {"_p_Environment", "Environment *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Logger = {"_p_Logger", "Logger *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Model = {"_p_Model", "Model *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_NeuralNetwork = {"_p_NeuralNetwork", "NeuralNetwork *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ReinforcementClassificationOptimizer = {"_p_ReinforcementClassificationOptimizer", "ReinforcementClassificationOptimizer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
@@ -16838,11 +17037,12 @@ static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Agent,
   &_swigt__p_ClassificationOptimizer,
+  &_swigt__p_Connect4Environment,
   &_swigt__p_Eigen__MatrixXf,
-  &_swigt__p_Environment,
   &_swigt__p_Logger,
   &_swigt__p_Model,
   &_swigt__p_NeuralNetwork,
+  &_swigt__p_ReinforcementClassificationOptimizer,
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_difference_type,
@@ -16865,11 +17065,12 @@ static swig_type_info *swig_type_initial[] = {
 
 static swig_cast_info _swigc__p_Agent[] = {  {&_swigt__p_Agent, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ClassificationOptimizer[] = {  {&_swigt__p_ClassificationOptimizer, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Connect4Environment[] = {  {&_swigt__p_Connect4Environment, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Eigen__MatrixXf[] = {  {&_swigt__p_Eigen__MatrixXf, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Environment[] = {  {&_swigt__p_Environment, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Logger[] = {  {&_swigt__p_Logger, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Model[] = {  {&_swigt__p_Model, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_NeuralNetwork[] = {  {&_swigt__p_NeuralNetwork, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ReinforcementClassificationOptimizer[] = {  {&_swigt__p_ReinforcementClassificationOptimizer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -16892,11 +17093,12 @@ static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Agent,
   _swigc__p_ClassificationOptimizer,
+  _swigc__p_Connect4Environment,
   _swigc__p_Eigen__MatrixXf,
-  _swigc__p_Environment,
   _swigc__p_Logger,
   _swigc__p_Model,
   _swigc__p_NeuralNetwork,
+  _swigc__p_ReinforcementClassificationOptimizer,
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_difference_type,

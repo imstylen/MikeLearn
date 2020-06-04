@@ -157,21 +157,23 @@
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="ClassificationOptimizer.cpp" />
-    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="Connect4Environment.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MikeLearn.cpp" />
     <ClCompile Include="MikeLearn_wrap.cxx" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
+    <ClCompile Include="ReinforcementClassificationOptimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="ClassificationOptimizer.h" />
-    <ClInclude Include="Environment.h" />
+    <ClInclude Include="Connect4Environment.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MikeLearn.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="NeuralNetwork.h" />
+    <ClInclude Include="ReinforcementClassificationOptimizer.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="MikeLearn.i">
