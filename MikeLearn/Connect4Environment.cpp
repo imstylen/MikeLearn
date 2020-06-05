@@ -111,6 +111,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		{
 			count = count + 1;
 		}
+		else
+		{
+			keepChecking = false;
+		}
 		xi = xi + xDir;
 		yi = yi + yDir;
 
@@ -136,6 +140,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		if (board[yi][xi] == player)
 		{
 			count = count + 1;
+		}
+		else
+		{
+			keepChecking = false;
 		}
 		xi = xi + xDir;
 		yi = yi + yDir;
@@ -163,6 +171,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		{
 			count = count + 1;
 		}
+		else
+		{
+			keepChecking = false;
+		}
 		xi = xi + xDir;
 		yi = yi + yDir;
 
@@ -188,6 +200,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		if (board[yi][xi] == player)
 		{
 			count = count + 1;
+		}
+		else
+		{
+			keepChecking = false;
 		}
 		xi = xi + xDir;
 		yi = yi + yDir;
@@ -215,6 +231,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		{
 			count = count + 1;
 		}
+		else
+		{
+			keepChecking = false;
+		}
 		xi = xi + xDir;
 		yi = yi + yDir;
 
@@ -240,6 +260,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		if (board[yi][xi] == player)
 		{
 			count = count + 1;
+		}
+		else
+		{
+			keepChecking = false;
 		}
 		xi = xi + xDir;
 		yi = yi + yDir;
@@ -267,6 +291,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		{
 			count = count + 1;
 		}
+		else
+		{
+			keepChecking = false;
+		}
 		xi = xi + xDir;
 		yi = yi + yDir;
 
@@ -293,6 +321,10 @@ bool Connect4Environment::checkGameOver(float player, int x, int y)
 		if (board[yi][xi] == player)
 		{
 			count = count + 1;
+		}
+		else
+		{
+			keepChecking = false;
 		}
 		xi = xi + xDir;
 		yi = yi + yDir;

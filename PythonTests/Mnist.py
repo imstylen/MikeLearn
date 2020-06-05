@@ -52,7 +52,7 @@ verbosity = 1
 
 #Initualize neural network
 # NeuralNetwork([nInputs, nHidden1, nHidden2,..,nOutputs],['Activation1','Activation2'...]
-N = NeuralNetwork([nIn,20,20,20,nOut],['sigmoid','sigmoid'])
+N = NeuralNetwork([nIn,10,nOut],['sigmoid','sigmoid'])
 N.setLoggerVerbosity(verbosity)
 
 #Initialize optimizer

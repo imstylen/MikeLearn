@@ -58,10 +58,8 @@ start_time = time.time();
 
 #fit data
 #fit(nEpoch,LearningRate,lambda)
-E = Opt.fit(100000,10,0.001,0.0)
+E = Opt.fit(10000,10,0.01,0.0)
 print("--- %s seconds ---" % (time.time() - start_time))
-Opt.setLoggerVerbosity(3)
-Opt.fit(1,5,0.01,0.0)
 
 fig, ax = plt.subplots()
 ax.plot(E)
