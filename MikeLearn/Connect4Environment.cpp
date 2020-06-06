@@ -93,254 +93,62 @@ void Connect4Environment::printBoard()
 bool Connect4Environment::checkGameOver(float player, int x, int y)
 {
 
-	int xi = x;
-	int yi = y;
-	int xDir;
-	int yDir;
-	int count;
-	bool keepChecking = true;
-
-	//N 
-	xDir = 0;
-	yDir = 1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//NE
-	xi = x;
-	yi = y;
-	xDir = 1;
-	yDir = 1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//E
-	xi = x;
-	yi = y;
-	xDir = 1;
-	yDir = 0;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//SE
-	xi = x;
-	yi = y;
-	xDir = 1;
-	yDir = -1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//S
-	xi = x;
-	yi = y;
-	xDir = 0;
-	yDir = -1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//SW
-	xi = x;
-	yi = y;
-	xDir = -1;
-	yDir = -1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
-	{
-		return true;
-	}
-	//W
-	xi = x;
-	yi = y;
-	xDir = -1;
-	yDir = 0;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
+	//north south
+	if ((shootRay(player, x, y, 0, 1) + shootRay(player, x, y, 0, -1)) >= 3)
 	{
 		return true;
 	}
 
-	//NW
-	xi = x;
-	yi = y;
-	xDir = -1;
-	yDir = 1;
-	count = 0;
-	keepChecking = true;
-	while (keepChecking)
-	{
-		if (board[yi][xi] == player)
-		{
-			count = count + 1;
-		}
-		else
-		{
-			keepChecking = false;
-		}
-		xi = xi + xDir;
-		yi = yi + yDir;
-
-		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
-		{
-			keepChecking = false;
-		}
-
-	}
-	if (count >= 4)
+	//east west
+	if ((shootRay(player, x, y, 1, 0) + shootRay(player, x, y, -1,0)) >= 3)
 	{
 		return true;
 	}
 
+	//north-east south-west
+	if ((shootRay(player, x, y, 1, 1) + shootRay(player, x, y, -1, -1)) >= 3)
+	{
+		return true;
+	}
+
+	//north-east south-west
+	if ((shootRay(player, x, y, -1, 1) + shootRay(player, x, y, 1, -1)) >= 3)
+	{
+		return true;
+	}
 
 	return false;
 
+}
+
+int Connect4Environment::shootRay(float player, int x, int y, int xDir, int yDir)
+{
+	int xi = x;
+	int yi = y;
+	int count;
+
+	bool keepChecking = true;
+	count = 0;
+
+	while (keepChecking)
+	{
+		xi = xi + xDir;
+		yi = yi + yDir;
+
+		if (xi < 0 || xi >= xDim || yi < 0 || yi >= yDim)
+		{
+			keepChecking = false;
+			break;
+		}
+		if (board[yi][xi] == player)
+		{
+			count = count + 1;
+		}
+		else
+		{
+			keepChecking = false;
+		}
+
+	}
+	return count;
 }

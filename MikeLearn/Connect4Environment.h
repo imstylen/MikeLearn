@@ -20,5 +20,6 @@ public:
 	void move(float player, int column);
 	void printBoard();
 	bool checkGameOver(float player, int x, int y);
+	int shootRay(float player, int x, int y, int xDir, int yDir);
 };
 
