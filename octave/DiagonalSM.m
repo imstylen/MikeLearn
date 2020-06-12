@@ -29,12 +29,12 @@ d2 = [0;1;1;0]
         x1 = s(x1N);
 
         x2N = W2*x1 + B2;
-        x2 = s(x2N);
+        x2 = softmax(x2N);
 
-        delta2 = (x2-t).*ds(x2N);
+        delta2 = (x2-t).*dsoftmax(x2N);
         delta1 = W2'*delta2.*ds(x1N);
 
-        dedw2 = delta2*x1';
+        dedw2 = (x2-t).*(dsoftmax(x2N)*x1)';
         dedw1 = delta1*x0';
 
         alpha = 0.1;
