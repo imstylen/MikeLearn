@@ -65,8 +65,10 @@ std::vector<float> ReinforcementClassificationOptimizer::fit(int nEpochs, int ep
 			//theta = theta + alpha*grad(J(theta))
 			//grad(J(theta)) = grad(log(pi(theta))*Vt
 			//				 = Vt/(pi(theta))*d(pi)/d(theta)
+			std::cout << XL << std::endl;
 
 			Eigen::MatrixXf e = XL.cwiseInverse();
+			std::cout << e << std::endl;
 			logPolicies.push_back(e);
 
 			float ei = (e).norm();
