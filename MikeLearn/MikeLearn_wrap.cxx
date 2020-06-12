@@ -16524,6 +16524,68 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Connect4Environment_shootRay(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Connect4Environment *arg1 = (Connect4Environment *) 0 ;
+  float arg2 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  int val6 ;
+  int ecode6 = 0 ;
+  PyObject *swig_obj[6] ;
+  int result;
+  
+  if (!SWIG_Python_UnpackTuple(args, "Connect4Environment_shootRay", 6, 6, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_Connect4Environment, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Connect4Environment_shootRay" "', argument " "1"" of type '" "Connect4Environment *""'"); 
+  }
+  arg1 = reinterpret_cast< Connect4Environment * >(argp1);
+  ecode2 = SWIG_AsVal_float(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Connect4Environment_shootRay" "', argument " "2"" of type '" "float""'");
+  } 
+  arg2 = static_cast< float >(val2);
+  ecode3 = SWIG_AsVal_int(swig_obj[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Connect4Environment_shootRay" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(swig_obj[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Connect4Environment_shootRay" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  ecode5 = SWIG_AsVal_int(swig_obj[4], &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "Connect4Environment_shootRay" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = static_cast< int >(val5);
+  ecode6 = SWIG_AsVal_int(swig_obj[5], &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "Connect4Environment_shootRay" "', argument " "6"" of type '" "int""'");
+  } 
+  arg6 = static_cast< int >(val6);
+  result = (int)(arg1)->shootRay(arg2,arg3,arg4,arg5,arg6);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_delete_Connect4Environment(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Connect4Environment *arg1 = (Connect4Environment *) 0 ;
@@ -16987,6 +17049,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "Connect4Environment_move", _wrap_Connect4Environment_move, METH_VARARGS, NULL},
 	 { "Connect4Environment_printBoard", _wrap_Connect4Environment_printBoard, METH_O, NULL},
 	 { "Connect4Environment_checkGameOver", _wrap_Connect4Environment_checkGameOver, METH_VARARGS, NULL},
+	 { "Connect4Environment_shootRay", _wrap_Connect4Environment_shootRay, METH_VARARGS, NULL},
 	 { "delete_Connect4Environment", _wrap_delete_Connect4Environment, METH_O, NULL},
 	 { "Connect4Environment_swigregister", Connect4Environment_swigregister, METH_O, NULL},
 	 { "Connect4Environment_swiginit", Connect4Environment_swiginit, METH_VARARGS, NULL},

@@ -1,4 +1,4 @@
-#include "ClassificationOptimizer.h"
+ #include "ClassificationOptimizer.h"
 
 ClassificationOptimizer::ClassificationOptimizer(NeuralNetwork* neuralNetwork, std::vector<std::vector<float>> xtrain, std::vector<std::vector<float>> ytrain)
 {
