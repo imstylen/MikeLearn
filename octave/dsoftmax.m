@@ -31,13 +31,16 @@ function dsm = dsoftmax (z)
     for j = 1:length(z)
       
       if i == j
-        dsm(j,i) = S(i)*(1-S(j));
+        J(j,i) = S(i)*(1-S(j));
       else
-        dsm(j,i) = -S(j)*S(i);
+        J(j,i) = -S(j)*S(i);
       end
       
     end
     
   end
+  
+  o = ones(length(z),1);
+  dsm = J'*z;
 
 endfunction

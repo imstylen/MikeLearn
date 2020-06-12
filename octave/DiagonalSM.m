@@ -14,7 +14,7 @@ d2 = [0;1;1;0]
     
  index = 1
  
- for epoch = 1:200001
+ for epoch = 1:20001
      for i = 1:1
 
         x0 = round(rand(4,1));
@@ -33,8 +33,8 @@ d2 = [0;1;1;0]
 
         delta2 = (x2-t).*dsoftmax(x2N);
         delta1 = W2'*delta2.*ds(x1N);
-
-        dedw2 = (x2-t).*(dsoftmax(x2N)*x1)';
+        
+        dedw2 = delta2*x1';
         dedw1 = delta1*x0';
 
         alpha = 0.1;
