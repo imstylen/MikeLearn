@@ -1,10 +1,10 @@
 #include "Connect4Environment.h"
 
-Connect4Environment::Connect4Environment(int xDim, int yDim, std::vector<Agent*> agents)
+Connect4Environment::Connect4Environment(int xDim, int yDim)
 {
 	this->xDim = xDim;
 	this->yDim = yDim;
-	this->agents = agents;
+
 
 	for (int i = 0; i < yDim; i++)
 	{

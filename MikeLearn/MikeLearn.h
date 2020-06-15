@@ -2,6 +2,6 @@
 #include "Model.h"
 #include "NeuralNetwork.h"
 #include "ClassificationOptimizer.h"
-#include "ReinforcementClassificationOptimizer.h"
 #include "Connect4Environment.h"
-#include "Agent.h"
+#include "Node.h"
+#include "ComputationGraph.h"
