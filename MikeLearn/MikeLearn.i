@@ -5,13 +5,13 @@
 
 %include "std_vector.i"
 %include "std_string.i"
-%include "Agent.h"
+%include "Node.h"
 namespace std {
     %template(FloatVector)   vector<float>;
     %template(FloatVectorVector) vector<vector<float>>;
     %template(IntVector)    vector<int>;
     %template(StringVector) vector<string>;
-    %template(AgentVector) vector<Agent*>;
+    %template(NodeVector) vector<Node*>;
 }
 %include "MikeLearn.h"
 %include "Model.h"
@@ -19,6 +19,6 @@ namespace std {
 %include "NeuralNetwork.h"
 %include "ClassificationOptimizer.h"
 %include "Connect4Environment.h"
-%include "ReinforcementClassificationOptimizer.h"
+%include "ComputationGraph.h"
 
 

@@ -26,10 +26,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Iris.py" />
+    <Compile Include="ComputationGraph.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Reinforce.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="XOReinforce.py" />
     <Compile Include="XOR.py">
       <SubType>Code</SubType>
     </Compile>
