@@ -2666,29 +2666,30 @@ SWIGINTERN PyObject *SWIG_PyStaticMethod_New(PyObject *SWIGUNUSEDPARM(self), PyO
 #define SWIGTYPE_p_Eigen__MatrixXf swig_types[3]
 #define SWIGTYPE_p_Logger swig_types[4]
 #define SWIGTYPE_p_Model swig_types[5]
-#define SWIGTYPE_p_NeuralNetwork swig_types[6]
-#define SWIGTYPE_p_Node swig_types[7]
-#define SWIGTYPE_p_ZNode swig_types[8]
-#define SWIGTYPE_p_allocator_type swig_types[9]
-#define SWIGTYPE_p_char swig_types[10]
-#define SWIGTYPE_p_difference_type swig_types[11]
-#define SWIGTYPE_p_p_PyObject swig_types[12]
-#define SWIGTYPE_p_size_type swig_types[13]
-#define SWIGTYPE_p_std__allocatorT_Node_p_t swig_types[14]
-#define SWIGTYPE_p_std__allocatorT_float_t swig_types[15]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[16]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[17]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t swig_types[18]
-#define SWIGTYPE_p_std__invalid_argument swig_types[19]
-#define SWIGTYPE_p_std__vectorT_Node_p_std__allocatorT_Node_p_t_t swig_types[20]
-#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[21]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[22]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[23]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_float_std__allocatorT_float_t_t_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t_t swig_types[24]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[25]
-#define SWIGTYPE_p_value_type swig_types[26]
-static swig_type_info *swig_types[28];
-static swig_module_info swig_module = {swig_types, 27, 0, 0, 0, 0};
+#define SWIGTYPE_p_NeuralNet swig_types[6]
+#define SWIGTYPE_p_NeuralNetwork swig_types[7]
+#define SWIGTYPE_p_Node swig_types[8]
+#define SWIGTYPE_p_ZNode swig_types[9]
+#define SWIGTYPE_p_allocator_type swig_types[10]
+#define SWIGTYPE_p_char swig_types[11]
+#define SWIGTYPE_p_difference_type swig_types[12]
+#define SWIGTYPE_p_p_PyObject swig_types[13]
+#define SWIGTYPE_p_size_type swig_types[14]
+#define SWIGTYPE_p_std__allocatorT_Node_p_t swig_types[15]
+#define SWIGTYPE_p_std__allocatorT_float_t swig_types[16]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[17]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[18]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t swig_types[19]
+#define SWIGTYPE_p_std__invalid_argument swig_types[20]
+#define SWIGTYPE_p_std__vectorT_Node_p_std__allocatorT_Node_p_t_t swig_types[21]
+#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[22]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[23]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[24]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_float_std__allocatorT_float_t_t_std__allocatorT_std__vectorT_float_std__allocatorT_float_t_t_t_t swig_types[25]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[26]
+#define SWIGTYPE_p_value_type swig_types[27]
+static swig_type_info *swig_types[29];
+static swig_module_info swig_module = {swig_types, 28, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -17130,16 +17131,14 @@ SWIGINTERN PyObject *Connect4Environment_swiginit(PyObject *SWIGUNUSEDPARM(self)
   return SWIG_Python_InitShadowInstance(args);
 }
 
-SWIGINTERN PyObject *_wrap_ComputationGraph_AddNode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_ComputationGraph_AddNode__SWIG_0(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
   PyObject *resultobj = 0;
   ComputationGraph *arg1 = (ComputationGraph *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  PyObject *swig_obj[1] ;
   int result;
   
-  if (!args) SWIG_fail;
-  swig_obj[0] = args;
+  if ((nobjs < 1) || (nobjs > 1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ComputationGraph, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComputationGraph_AddNode" "', argument " "1"" of type '" "ComputationGraph *""'"); 
@@ -17150,6 +17149,76 @@ SWIGINTERN PyObject *_wrap_ComputationGraph_AddNode(PyObject *SWIGUNUSEDPARM(sel
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComputationGraph_AddNode__SWIG_1(PyObject *SWIGUNUSEDPARM(self), Py_ssize_t nobjs, PyObject **swig_obj) {
+  PyObject *resultobj = 0;
+  ComputationGraph *arg1 = (ComputationGraph *) 0 ;
+  Node *arg2 = (Node *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int result;
+  
+  if ((nobjs < 2) || (nobjs > 2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_ComputationGraph, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ComputationGraph_AddNode" "', argument " "1"" of type '" "ComputationGraph *""'"); 
+  }
+  arg1 = reinterpret_cast< ComputationGraph * >(argp1);
+  res2 = SWIG_ConvertPtr(swig_obj[1], &argp2,SWIGTYPE_p_Node, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ComputationGraph_AddNode" "', argument " "2"" of type '" "Node *""'"); 
+  }
+  arg2 = reinterpret_cast< Node * >(argp2);
+  result = (int)(arg1)->AddNode(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ComputationGraph_AddNode(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  
+  if (!(argc = SWIG_Python_UnpackTuple(args, "ComputationGraph_AddNode", 0, 2, argv))) SWIG_fail;
+  --argc;
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ComputationGraph, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_ComputationGraph_AddNode__SWIG_0(self, argc, argv);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ComputationGraph, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_Node, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_ComputationGraph_AddNode__SWIG_1(self, argc, argv);
+      }
+    }
+  }
+  
+fail:
+  SWIG_Python_RaiseOrModifyTypeError("Wrong number or type of arguments for overloaded function 'ComputationGraph_AddNode'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ComputationGraph::AddNode()\n"
+    "    ComputationGraph::AddNode(Node *)\n");
+  return 0;
 }
 
 
@@ -17454,6 +17523,148 @@ SWIGINTERN PyObject *ComputationGraph_swiginit(PyObject *SWIGUNUSEDPARM(self), P
   return SWIG_Python_InitShadowInstance(args);
 }
 
+SWIGINTERN PyObject *_wrap_new_NeuralNet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< int,std::allocator< int > > arg1 ;
+  std::vector< std::string,std::allocator< std::string > > arg2 ;
+  PyObject *swig_obj[2] ;
+  NeuralNet *result = 0 ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "new_NeuralNet", 2, 2, swig_obj)) SWIG_fail;
+  {
+    std::vector< int,std::allocator< int > > *ptr = (std::vector< int,std::allocator< int > > *)0;
+    int res = swig::asptr(swig_obj[0], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_NeuralNet" "', argument " "1"" of type '" "std::vector< int,std::allocator< int > >""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(swig_obj[1], &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_NeuralNet" "', argument " "2"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (NeuralNet *)new NeuralNet(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_NeuralNet, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NeuralNet_setLoggerVerbosity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NeuralNet *arg1 = (NeuralNet *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject *swig_obj[2] ;
+  
+  if (!SWIG_Python_UnpackTuple(args, "NeuralNet_setLoggerVerbosity", 2, 2, swig_obj)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNet_setLoggerVerbosity" "', argument " "1"" of type '" "NeuralNet *""'"); 
+  }
+  arg1 = reinterpret_cast< NeuralNet * >(argp1);
+  ecode2 = SWIG_AsVal_int(swig_obj[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "NeuralNet_setLoggerVerbosity" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setLoggerVerbosity(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NeuralNet_GetNumInputs(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NeuralNet *arg1 = (NeuralNet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  int result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNet_GetNumInputs" "', argument " "1"" of type '" "NeuralNet *""'"); 
+  }
+  arg1 = reinterpret_cast< NeuralNet * >(argp1);
+  result = (int)(arg1)->GetNumInputs();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NeuralNet_GetNumOutputs(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NeuralNet *arg1 = (NeuralNet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  int result;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNet, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NeuralNet_GetNumOutputs" "', argument " "1"" of type '" "NeuralNet *""'"); 
+  }
+  arg1 = reinterpret_cast< NeuralNet * >(argp1);
+  result = (int)(arg1)->GetNumOutputs();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_NeuralNet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NeuralNet *arg1 = (NeuralNet *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject *swig_obj[1] ;
+  
+  if (!args) SWIG_fail;
+  swig_obj[0] = args;
+  res1 = SWIG_ConvertPtr(swig_obj[0], &argp1,SWIGTYPE_p_NeuralNet, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_NeuralNet" "', argument " "1"" of type '" "NeuralNet *""'"); 
+  }
+  arg1 = reinterpret_cast< NeuralNet * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *NeuralNet_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!SWIG_Python_UnpackTuple(args, "swigregister", 1, 1, &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_NeuralNet, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *NeuralNet_swiginit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  return SWIG_Python_InitShadowInstance(args);
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { "SWIG_PyInstanceMethod_New", SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { "delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_O, NULL},
@@ -17716,7 +17927,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_Connect4Environment", _wrap_delete_Connect4Environment, METH_O, NULL},
 	 { "Connect4Environment_swigregister", Connect4Environment_swigregister, METH_O, NULL},
 	 { "Connect4Environment_swiginit", Connect4Environment_swiginit, METH_VARARGS, NULL},
-	 { "ComputationGraph_AddNode", _wrap_ComputationGraph_AddNode, METH_O, NULL},
+	 { "ComputationGraph_AddNode", _wrap_ComputationGraph_AddNode, METH_VARARGS, NULL},
 	 { "ComputationGraph_AddZNode", _wrap_ComputationGraph_AddZNode, METH_O, NULL},
 	 { "ComputationGraph_setRootNode", _wrap_ComputationGraph_setRootNode, METH_VARARGS, NULL},
 	 { "ComputationGraph_setParent", _wrap_ComputationGraph_setParent, METH_VARARGS, NULL},
@@ -17729,6 +17940,13 @@ static PyMethodDef SwigMethods[] = {
 	 { "delete_ComputationGraph", _wrap_delete_ComputationGraph, METH_O, NULL},
 	 { "ComputationGraph_swigregister", ComputationGraph_swigregister, METH_O, NULL},
 	 { "ComputationGraph_swiginit", ComputationGraph_swiginit, METH_VARARGS, NULL},
+	 { "new_NeuralNet", _wrap_new_NeuralNet, METH_VARARGS, NULL},
+	 { "NeuralNet_setLoggerVerbosity", _wrap_NeuralNet_setLoggerVerbosity, METH_VARARGS, NULL},
+	 { "NeuralNet_GetNumInputs", _wrap_NeuralNet_GetNumInputs, METH_O, NULL},
+	 { "NeuralNet_GetNumOutputs", _wrap_NeuralNet_GetNumOutputs, METH_O, NULL},
+	 { "delete_NeuralNet", _wrap_delete_NeuralNet, METH_O, NULL},
+	 { "NeuralNet_swigregister", NeuralNet_swigregister, METH_O, NULL},
+	 { "NeuralNet_swiginit", NeuralNet_swiginit, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -17748,6 +17966,7 @@ static swig_type_info _swigt__p_Connect4Environment = {"_p_Connect4Environment",
 static swig_type_info _swigt__p_Eigen__MatrixXf = {"_p_Eigen__MatrixXf", "Eigen::MatrixXf *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Logger = {"_p_Logger", "Logger *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Model = {"_p_Model", "Model *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_NeuralNet = {"_p_NeuralNet", "NeuralNet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_NeuralNetwork = {"_p_NeuralNetwork", "NeuralNetwork *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Node = {"_p_Node", "std::vector< Node * >::value_type|Node *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ZNode = {"_p_ZNode", "ZNode *", 0, 0, (void*)0, 0};
@@ -17777,6 +17996,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Eigen__MatrixXf,
   &_swigt__p_Logger,
   &_swigt__p_Model,
+  &_swigt__p_NeuralNet,
   &_swigt__p_NeuralNetwork,
   &_swigt__p_Node,
   &_swigt__p_ZNode,
@@ -17806,6 +18026,7 @@ static swig_cast_info _swigc__p_Connect4Environment[] = {  {&_swigt__p_Connect4E
 static swig_cast_info _swigc__p_Eigen__MatrixXf[] = {  {&_swigt__p_Eigen__MatrixXf, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Logger[] = {  {&_swigt__p_Logger, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Model[] = {  {&_swigt__p_Model, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_NeuralNet[] = {  {&_swigt__p_NeuralNet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_NeuralNetwork[] = {  {&_swigt__p_NeuralNetwork, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Node[] = {  {&_swigt__p_Node, 0, 0, 0},  {&_swigt__p_ZNode, _p_ZNodeTo_p_Node, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ZNode[] = {  {&_swigt__p_ZNode, 0, 0, 0},{0, 0, 0, 0}};
@@ -17835,6 +18056,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Eigen__MatrixXf,
   _swigc__p_Logger,
   _swigc__p_Model,
+  _swigc__p_NeuralNet,
   _swigc__p_NeuralNetwork,
   _swigc__p_Node,
   _swigc__p_ZNode,

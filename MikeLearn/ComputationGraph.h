@@ -15,6 +15,7 @@ protected:
 	
 public:
 	int AddNode();
+	int AddNode(Node* newNode);
 	int AddZNode();
 	void setRootNode(int rootNodeID) { rootNode = NodeVector[rootNodeID]; };
 	//void setPaths(Node* node);

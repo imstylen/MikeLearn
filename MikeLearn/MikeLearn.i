@@ -21,5 +21,6 @@ namespace std {
 %include "ClassificationOptimizer.h"
 %include "Connect4Environment.h"
 %include "ComputationGraph.h"
+%include "NeuralNet.h"
 
 

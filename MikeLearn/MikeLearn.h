@@ -6,3 +6,4 @@
 #include "Node.h"
 #include "ZNode.h"
 #include "ComputationGraph.h"
+#include "NeuralNet.h"

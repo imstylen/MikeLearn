@@ -10,6 +10,15 @@ int ComputationGraph::AddNode()
 	return currentNodeIndex - 1;
 }
 
+int ComputationGraph::AddNode(Node* newNode)
+{
+	newNode->setId(currentNodeIndex);
+	NodeVector.push_back(newNode);
+	currentNodeIndex++;
+
+	return currentNodeIndex - 1;
+}
+
 int ComputationGraph::AddZNode()
 {
 	ZNode* newNode = new ZNode();
@@ -67,6 +76,11 @@ void ComputationGraph::setLossPath(Node* node, std::vector<Node*> path)
 {
 	path.push_back(node);
 
+	if (node == nullptr)
+	{
+		return;
+	}
+
 	if (node->getIsLeaf() == true)
 	{
 		node->setPathToLoss(path);
@@ -93,12 +107,12 @@ void ComputationGraph::forward(Node* node)
 	logger.LogGeneral("==============", "Node", node->getID(), "==============");
 	if (zNode != nullptr)
 	{
-		logger.LogGeneral("Cast succesful!");
+		logger.LogGeneral("Cast successful!");
 		zNode->Compute();
 	}
 	else
 	{
-		logger.LogGeneral("Cast unsuccesful!");
+		logger.LogGeneral("Cast unsuccessful!");
 	}
 
 	if (node == rootNode)

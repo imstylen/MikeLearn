@@ -29,6 +29,9 @@
     <Compile Include="ComputationGraph.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="NeuralNetGraph.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Reinforce.py">
       <SubType>Code</SubType>
     </Compile>

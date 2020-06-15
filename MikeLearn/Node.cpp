@@ -13,7 +13,9 @@ void Node::printPathToLoss()
 
 void Node::setData(Eigen::MatrixXf& inData)
 {
+	Logger logger = Logger(1);
 	data = inData;
+	logger.LogGeneral(data);
 }
 
 void Node::setData(std::vector<float> inData,int nCol)
