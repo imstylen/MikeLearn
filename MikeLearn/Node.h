@@ -16,8 +16,12 @@ protected:
 	std::vector<Node*> children;
 
 	bool isLeaf = false;
+
+	bool doesCompute = false;
 	
 	std::vector<Node*> pathToLoss;
+
+	Eigen::MatrixXf data;
 
 public:
 	void setParent(Node* newParent) { parent = newParent; parent->addChild(this); };
@@ -35,5 +39,11 @@ public:
 	void setPathToLoss(std::vector<Node*> newPathToLoss) { pathToLoss = newPathToLoss; };
 
 	void printPathToLoss();
+
+	Eigen::MatrixXf getData() { return data; };
+	void setData(std::vector<float> inData, int nCol);
+	void setData(Eigen::MatrixXf& inData);
+
+	virtual void Compute();
 };
 

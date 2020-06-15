@@ -164,6 +164,7 @@
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="ZNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassificationOptimizer.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="Model.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="ZNode.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="MikeLearn.i">

@@ -6,6 +6,7 @@
 %include "std_vector.i"
 %include "std_string.i"
 %include "Node.h"
+%include "ZNode.h"
 namespace std {
     %template(FloatVector)   vector<float>;
     %template(FloatVectorVector) vector<vector<float>>;

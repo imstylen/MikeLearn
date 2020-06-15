@@ -4,31 +4,30 @@ from MikeLearn import ComputationGraph
 comp_graph = ComputationGraph()
 
 n = list();
-for i in range(0,12):
+for i in range(0,3):
     n.append(comp_graph.AddNode())
 
+n.append(comp_graph.AddZNode())
 comp_graph.setParent(0,3)
 comp_graph.setParent(1,3)
 comp_graph.setParent(2,3)
 comp_graph.setLeaf(1)
 comp_graph.setLeaf(2)
 
-comp_graph.setParent(3,4)
+comp_graph.setRootNode(3)
 
-comp_graph.setParent(4,7)
-comp_graph.setParent(5,7)
-comp_graph.setParent(6,7)
-comp_graph.setLeaf(5)
-comp_graph.setLeaf(6)
+#xor
 
-comp_graph.setParent(7,8)
+x0 = [1,0]
+nCol = 1
+comp_graph.setNodeData(0,x0,nCol)
 
-comp_graph.setParent(8,10)
-comp_graph.setParent(9,10)
+W1 = [0.5,0.4,0.3,0.1]
+nCol = 2
+comp_graph.setNodeData(1,W1,nCol)
 
-comp_graph.setParent(10,11)
-
-comp_graph.setRootNode(11);
+B1 = [0.1,0.1]
+nCol = 1
+comp_graph.setNodeData(2,B1,nCol)
 
 comp_graph.printstuff();
-

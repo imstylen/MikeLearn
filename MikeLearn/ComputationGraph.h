@@ -2,6 +2,7 @@
 #include "Logger.h"
 #include <vector>
 #include "Node.h"
+#include "ZNode.h"
 
 class ComputationGraph
 {
@@ -14,13 +15,18 @@ protected:
 	
 public:
 	int AddNode();
+	int AddZNode();
 	void setRootNode(int rootNodeID) { rootNode = NodeVector[rootNodeID]; };
 	//void setPaths(Node* node);
 	void setParent(int childId, int parentId);
 	void setLeaf(int leafNode);
 	void printstuff();
 
-	void recur(Node* node, std::vector<Node*> path);
+	void setLossPath(Node* node, std::vector<Node*> path);
+
+	void setNodeData(int nodeId, std::vector<float> inData, int nCol);
+
+	void forward(Node* node);
 	
 };
 
