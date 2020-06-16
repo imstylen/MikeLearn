@@ -33,7 +33,7 @@ start_time = time.time();
 
 #fit data
 #fit(nEpoch,LearningRate,lambda)
-E = Opt.fit(10000,0.1,0.0)
+E = Opt.fit(100000,0.1,0.0)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 fig, ax = plt.subplots()

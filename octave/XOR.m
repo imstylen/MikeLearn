@@ -16,8 +16,8 @@ Y = [0;
  W2 = rand(1,2)
  
  B1 = rand(2,1)
- B2 = rand(1)
-    
+ B2 = rand(1,1)
+  
  index = 1
  
  for epoch = 1:10000
@@ -32,7 +32,7 @@ Y = [0;
         x2N = W2*x1 + B2;
         x2 = s(x2N);
 
-        delta2 = (x2-t)*ds(x2N);
+        delta2 = (x2-t).*ds(x2N);
         delta1 = W2'*delta2.*ds(x1N);
 
         dedw2 = delta2*x1';
@@ -46,7 +46,7 @@ Y = [0;
         B2 = B2 - alpha*delta2;
         B1 = B1 - alpha*delta1;
         
-         E(index) = norm(x2-t)^2;
+         E(index) = 0.5*norm(x2-t)^2;
          E(index);
          index = index + 1;
 
